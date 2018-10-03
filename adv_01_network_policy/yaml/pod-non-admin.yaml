@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp-pod-non-admin
+  labels:
+    type: non-admin
+spec:
+  containers:
+  - name: myapp
+    image: jyang4900/myapp

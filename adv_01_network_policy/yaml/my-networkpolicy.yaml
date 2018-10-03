@@ -1,0 +1,13 @@
+kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: my-networkpolicy
+spec:
+  podSelector:
+    matchLabels:
+      env: prod
+  ingress:
+  - from:
+    - podSelector:
+        matchLabels:
+          type: admin
